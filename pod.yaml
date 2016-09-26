@@ -1,0 +1,11 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: iscsi-provisioner
+spec:
+  containers:
+    - name: iscsi-provisioner
+      image: hchiramm/iscsi-provisioner
+      args:
+        - "-provisioner-name=iscsi-provisioner"
+      imagePullPolicy: "IfNotPresent"
